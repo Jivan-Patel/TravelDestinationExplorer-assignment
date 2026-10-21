@@ -3,12 +3,6 @@ import { notFound } from "next/navigation";
 import { destinations } from "../../data/destination";
 import BookingInquiryCard from "@/components/BookingInquiryCard";
 
-export function generateStaticParams() {
-  return destinations.map((d) => ({
-    id: String(d.id),
-  }));
-}
-
 type DestinationDetailsProps = {
   params: Promise<{ id: string }>;
 };
